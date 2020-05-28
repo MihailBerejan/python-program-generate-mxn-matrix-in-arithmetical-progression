@@ -1,0 +1,22 @@
+'''
+Generating a m lines x n columns matrix that contains an arithmetical progression (a[0][0] = 1, step = 1)
+    
+'''  
+
+def printMatrix(Matrix, nrLinii, nrCol) :  
+    '''
+    printing the matrix in an acceptable design and format
+    
+    '''        
+    for j in range(nrLinii) :  
+        for i in range(nrCol) :  
+            print("%6.1i" %Matrix[i][j], end = " ") 
+  
+        print() 
+
+a = int(input("Number of lines: "))
+b = int(input("Number of columns: ")) 
+matrix = [[i+j+1+i*(b-1) for i in range(0, a)] for j in range(0, b)]
+print("\nThe matrix is:")
+
+printMatrix(matrix, a, b)
